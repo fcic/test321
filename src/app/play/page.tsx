@@ -532,7 +532,7 @@ function PlayPageClient() {
       setLoadingMessage(
         currentSource && currentId
           ? '🎬 正在获取视频详情...'
-          : '🔍 正在搜索播放源...'
+          : '🔍 Duan Lian 正在搜索播放源...'
       );
 
       let sourcesInfo = await fetchSourcesData(searchTitle || videoTitle);
@@ -572,7 +572,7 @@ function PlayPageClient() {
         optimizationEnabled
       ) {
         setLoadingStage('preferring');
-        setLoadingMessage('⚡ 正在优选最佳播放源...');
+        setLoadingMessage('⚡ Duan Lian 正在破解中...优选最佳播放源...');
 
         detailData = await preferBestSource(sourcesInfo);
       }
@@ -600,7 +600,7 @@ function PlayPageClient() {
       window.history.replaceState({}, '', newUrl.toString());
 
       setLoadingStage('ready');
-      setLoadingMessage('✨ 准备就绪，即将开始播放...');
+      setLoadingMessage('✨ Duan Lian 破解成功...准备播放...');
 
       // 短暂延迟让用户看到完成状态
       setTimeout(() => {
