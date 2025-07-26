@@ -2,7 +2,7 @@
 
 'use client';
 
-import { Settings, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -292,13 +292,13 @@ export const SettingsButton: React.FC = () => {
 
   return (
     <>
-      <button
+      {/* <button
         onClick={handleSettingsClick}
         className='w-10 h-10 p-2 rounded-full flex items-center justify-center text-gray-600 hover:bg-gray-200/50 dark:text-gray-300 dark:hover:bg-gray-700/50 transition-colors'
         aria-label='Settings'
       >
         <Settings className='w-full h-full' />
-      </button>
+      </button> */}
 
       {/* 使用 Portal 将设置面板渲染到 document.body */}
       {isOpen && mounted && createPortal(settingsPanel, document.body)}
